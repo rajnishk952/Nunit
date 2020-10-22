@@ -70,7 +70,7 @@ namespace BrowserStack
                 //Console.WriteLine(browserStackLocal.isRunning().ToString());
                 List<KeyValuePair<string, string>> bsLocalArgs = new List<KeyValuePair<string, string>>() {
                 new KeyValuePair<string, string>("key", accesskey),
-                new KeyValuePair<string, string>("binarypath", "/Users/rajnish/Downloads/BrowserStackLocal")
+                new KeyValuePair<string, string>("binarypath", "path")
                 };
 
                 if (!browserStackLocal.isRunning())
@@ -97,7 +97,7 @@ namespace BrowserStack
             myWebRequest.ContentLength = requestData.Length;
             using (System.IO.Stream st = myWebRequest.GetRequestStream()) st.Write(requestData, 0, requestData.Length);
 
-            System.Net.NetworkCredential myNetworkCredential = new NetworkCredential("rajnishkumar21", "shzMytdTq5WXMzKqkT81");
+            System.Net.NetworkCredential myNetworkCredential = new NetworkCredential("user", "key");
             CredentialCache myCredentialCache = new CredentialCache();
             myCredentialCache.Add(myUri, "Basic", myNetworkCredential);
             myHttpWebRequest.PreAuthenticate = true;
